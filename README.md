@@ -22,8 +22,10 @@ Si la commande répond quelque chose comme `v18.x`, il faut installer une versio
 
 ### Méthode rapide
 
-Double-cliquez sur **`demarrer.cmd`** à la racine du dossier : il installe les dépendances
-si besoin puis démarre le site et ouvre <http://localhost:5173>.
+- **`demarrer.cmd`** : installe les dépendances si besoin, démarre le site et ouvre
+  <http://localhost:5173>.
+- **`mettre-a-jour.cmd`** : récupère les dernières corrections depuis GitHub (`git pull`),
+  réinstalle si besoin, puis démarre le site. À utiliser quand le dépôt a été mis à jour.
 
 ### Méthode manuelle (invite de commandes / PowerShell)
 
@@ -64,6 +66,7 @@ utilisable depuis un mobile connecté au même réseau.
 
 ```
 ├── demarrer.cmd                  # Lancement local en un clic (Windows)
+├── mettre-a-jour.cmd             # git pull + lancement, en un clic (Windows)
 ├── index.html                    # HTML racine + config Tailwind (CDN)
 ├── vite.config.js
 └── src/
