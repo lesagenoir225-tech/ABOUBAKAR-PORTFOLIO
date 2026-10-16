@@ -37,3 +37,12 @@ Thumbs.db
 # Vercel / Netlify
 .vercel
 .netlify
+
+# TikTok fruits — médias générés (garder seulement le script + le guide)
+tiktok-fruits/out/
+tiktok-fruits/img/
+tiktok-fruits/audio/
+tiktok-fruits/scenes/
+tiktok-fruits/txt/
+tiktok-fruits/check/
+tiktok-fruits/package-lock.json
