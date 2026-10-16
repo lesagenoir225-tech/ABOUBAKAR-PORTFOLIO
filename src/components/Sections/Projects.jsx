@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Monitor } from 'lucide-react';
+import { ExternalLink, Monitor } from 'lucide-react';
+import { GithubIcon } from '../UI/BrandIcons';
 
 const projectData = [
   {
@@ -111,6 +112,17 @@ const Projects = () => {
                       </span>
                       <h3 className="text-2xl font-heading font-bold">{project.title}</h3>
                     </div>
+                    {project.code && project.code !== '#' && (
+                      <a
+                        href={project.code}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Voir le code de ${project.title}`}
+                        className="p-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-[#00F5D4] hover:border-[#00F5D4]/40 transition-all"
+                      >
+                        <GithubIcon size={18} />
+                      </a>
+                    )}
                   </div>
 
                   <p className="text-white/60 mb-6 leading-relaxed">

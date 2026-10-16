@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, Linkedin, MessageCircle, Instagram } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
+import { TikTokIcon } from '../UI/BrandIcons';
 
 const navLinks = [
   { name: 'About', id: 'about' },
@@ -84,7 +85,7 @@ const Sidebar = () => {
             <MessageCircle size={20} />
           </a>
           <a href="https://www.tt.site/t/ZSbooCb31/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-[#FF2D75]/20 text-white/60 hover:text-[#FF2D75] transition-all">
-            <Instagram size={20} />
+            <TikTokIcon size={20} />
           </a>
         </div>
       </aside>

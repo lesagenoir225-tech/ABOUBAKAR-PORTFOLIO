@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useScroll } from 'framer-motion';
 import Sidebar from './Sidebar';
 import Hero from '../Sections/Hero';
 import About from '../Sections/About';
@@ -10,6 +11,8 @@ import Process from '../Sections/Process';
 import Contact from '../Sections/Contact';
 
 const MainLayout = () => {
+  const { scrollYProgress } = useScroll();
+
   return (
     <div className="min-h-screen bg-[#0A0A0C] text-white selection:bg-[#00F5D4] selection:text-black">
       <Sidebar />
@@ -26,8 +29,9 @@ const MainLayout = () => {
         </div>
       </main>
       {/* Global Scroll Progress Indicator */}
-      <div className="fixed top-0 left-0 h-1 bg-gradient-to-r from-[#00F5D4] to-[#FF2D75] z-[60] transition-all duration-100"
-           style={{ width: '0%' }} // This would be dynamically updated via a hook
+      <motion.div
+        className="fixed top-0 left-0 h-1 w-full origin-left bg-gradient-to-r from-[#00F5D4] to-[#FF2D75] z-[60]"
+        style={{ scaleX: scrollYProgress }}
       />
     </div>
   );
